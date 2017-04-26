@@ -3,7 +3,7 @@ Evolutionary Plastic Artificial Neural Networks
 
 ### General:
 
-**epann** is a library for implementing for performing neuroevolution experiments with indirectly encoded genomes, namely Compositional Pattern Producing Networks (CPPN).
+**epann** is a library for performing neuroevolution experiments with indirectly encoded genomes, namely Compositional Pattern Producing Networks (CPPN).
 Genomes can be mapped to functional artificial neural network phenotypes for artificial life and machine learning experiments.
 
 ### Purpose:
@@ -14,6 +14,6 @@ Genomes can be mapped to functional artificial neural network phenotypes for art
 
 ### Getting Started:
 
-You can find a collection of tutorials meant to introduce the major algorithms and features of the package.
+You can find a collection of tutorials meant to introduce the major algorithms and features of the package below.
 
-Start with the [Introduction to epann](https://github.com/chadwcarlson/epann/tree/master/tutorials)
+**Start with an [Introduction to epann](https://github.com/chadwcarlson/epann/tree/master/tutorials)**
