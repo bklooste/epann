@@ -20,9 +20,9 @@ Most of the algorithms used in **epann** come from the works of Kenneth O. Stanl
 #### 2. Simulating Organisms that Learn
 #### 3. Neuroevolution: Genetic Representations of Artificial Neural Networks
 #### 4. Compositional Pattern Producing Networks
-#### 5. The HyperNEAT Algorithm
-#### 6. Objective Search: Evolving Plastic ANNs with an Explicit Objective
-#### 7. Non-Objective Search: Evolving Plastic ANNs without an Explicit Object
+#### 5. The Substrate: Mapping Genotype to Phenotype
+#### 6. HyperNEAT: Hypercube-based NeuroEvolution of Augmenting Topologies
+
 
 ---
 
