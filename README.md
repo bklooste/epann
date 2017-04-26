@@ -3,7 +3,7 @@ Evolutionary Plastic Artificial Neural Networks
 
 ### General:
 
-epann is a Python package for implementing Compositional Pattern Producing Network (CPPN) indirectly encoded genomes. Genomes can be mapped to functional artificial neural networks for neuroevolution and artificial life experiments.
+**epann** is a Python package for implementing Compositional Pattern Producing Network (CPPN) indirectly encoded genomes. Genomes can be mapped to functional artificial neural networks for neuroevolution and artificial life experiments.
 
 ### Purpose:
 1. Greater understanding of the HyperNEAT algorithm and indirect encoding variants for evolving a populations of neural networks.
