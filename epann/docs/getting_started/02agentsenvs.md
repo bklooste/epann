@@ -40,7 +40,7 @@ An agent remains stationary in a column of a grid world, while the world continu
 
 While the agent always remains in the same column, it can execute one of three actions at any time based on what it sees in the environment to change its row. It can stay in its current row, or it can move upwards or downwards one row. 
 
-We would like to find agents who can feed themselves - that is, organisms that can observe nutrient locations and execute the appropriate actions to pass through those pixels and ingest them. (One potential objective is to find agent's who eat the most nutrients in a given trial)
+We would like to find agents who can feed themselves - that is, organisms that can observe nutrient locations and execute the appropriate actions to pass through those pixels and ingest them. We can judge how well an agent (a solution) is performing in this environment by enforcing some kind of an objective. Some hard objectives would be to eat every piece of food that passes through its FOV, or simply eat the most food during a lifetime. A softer objective might be to just eat enough food to stay alive based on some definition of its metabolic baseline.
 
 If we designed a neural network for this controller, it would require at least six input nodes (one for each of the pixels in its field of view) and three output nodes (one for each of the potential actions). An effective controller ANN may also include layers of hidden nodes. (**Figure 2.2**)
 
