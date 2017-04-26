@@ -16,4 +16,4 @@ Genomes can be mapped to functional artificial neural network phenotypes for art
 
 You can find a collection of tutorials meant to introduce the major algorithms and features of the package below.
 
-**Start with an [Introduction to epann](https://github.com/chadwcarlson/epann/tree/master/tutorials)**
+**Start with an [Introduction to epann](https://github.com/chadwcarlson/epann/tree/master/epann/docs/getting_started)**
