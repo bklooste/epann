@@ -6,9 +6,7 @@
 
 **epann** is a neuroevolution framework for designing artificial life experiments using variants of the HyperNEAT algorithm. 
 
-The package is itself a practice in package management and maintenance specific to the research goals of the author in the fields of machine learning, artificial life, neuroevolution, and theoretical neuroscience. The author recognizes the existence of other [libraries](http://eplex.cs.ucf.edu/neat_software/) that already implement many features of this research pipeline, however maintains the (misguided?) perspective that proper understanding can come from writing it yourself. 
-
-You can run any of these notebook tutorials on your local machine by first cloning the **epann** repository. 
+The author recognizes the existence of other [libraries](http://eplex.cs.ucf.edu/neat_software/) that already implement many features of this research pipeline, however maintains the perspective that better understanding can come from writing it yourself. 
 
 ### Overview
 
