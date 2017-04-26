@@ -15,4 +15,4 @@ Evolutionary Plastic Artificial Neural Networks
 
 You can find a collection of tutorials meant to introduce the major algorithms and features of the package below.
 
-**Start with an [Introduction to epann](https://github.com/chadwcarlson/epann/blob/master/epann/docs/getting_started/01introduction.ipynb)**
+**Start with an [Introduction to epann](https://github.com/chadwcarlson/epann/blob/master/epann/docs/getting_started/01introduction.md)**

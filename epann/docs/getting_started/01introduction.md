@@ -28,4 +28,4 @@ Most of the algorithms used in **epann** come from the works of Kenneth O. Stanl
 
 ---
 
-**Move on to [Part 2: Simulating Agents that Learn](02agentsenvs.ipynb)**
+**Move on to [Part 2: Simulating Agents that Learn](02agentsenvs.md)**
