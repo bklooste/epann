@@ -31,7 +31,7 @@ class Animation:
         plt.axis('off')
         plt.show()
 
-##### EXAMPLE #####
-sample = np.random.randn(100, 100, 60)
-anim = Animation(sample)
-anim.run()
+# ##### EXAMPLE #####
+# sample = np.random.randn(100, 100, 60)
+# anim = Animation(sample)
+# anim.run()
