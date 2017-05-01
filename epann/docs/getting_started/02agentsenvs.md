@@ -31,6 +31,8 @@ Ultimately we will be able to use **epann** on more complex agent-environment co
 
 We can design our agent in an environment that resembles the popular reinforcement learning benchmark game Flappy Bird. (a single frame from this task is shown below in **Figure 2.1**)
 
+##### Figure 2.1. Example Nutrient Environment
+
 An agent remains stationary in a column of a grid world, while the world continues to fly by it, updating the values of columns with each time step. The agent in **Figure 2.1** below is black, nutrients in the world are green, and blue pixels indicate the agent's field of view (what the organism can actually see around it).
 
 ##### Figure 2.1. Example Control task
