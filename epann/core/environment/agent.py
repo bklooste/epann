@@ -8,7 +8,7 @@ class Agent:
     def __init__(self, world, num_decisions, world_vals):
 
         # Observation parameters
-        self.levels_FOV = 2
+        self.levels_FOV = 4
         self.conical_FOV = False
 
         # Action parameters
@@ -24,6 +24,7 @@ class Agent:
         # Dynamic global parameters changed by actions
         self.location = [ int(self.world.shape[0]/2), int(self.world.shape[1]/2) ]
         self.heading = 0
+        self.headings = { 0: [0, 1, 2], 1: [2, 5, 8], 2: [8, 7, 6], 3: [6, 3, 0] }
 
         # Place initial agent location in world history
         self.agent_value = 2
@@ -32,6 +33,7 @@ class Agent:
 
         if self.visualize:
             self.step_tick = 0
+            self.world[self.location[0], self.location[1]] = self.metabolic_cost
             self.world_history[:, :, 0] = copy(self.world)
             FOV = self.define_FOV()
             self.world_history[ self.location[0], self.location[1], 0 ] = self.agent_value
@@ -81,19 +83,50 @@ class Agent:
         return heading
 
     def define_FOV(self):
+
         rows = range(self.location[0] - (self.levels_FOV), self.location[0] + (self.levels_FOV + 1))
         cols = range(self.location[1] - (self.levels_FOV), self.location[1] + (self.levels_FOV + 1))
+
         FOV = list(itertools.product(rows, cols))
         FOV = [(self.enforce_wrapping(i), self.enforce_wrapping(j)) for i, j in FOV]
 
-        if self.visualize:
-            self.visualize_FOV(FOV)
+        FOV_heading = self.define_FOV_heading()
 
-        return FOV
+        final_FOV = [ FOV[i] for i in FOV_heading ]
+
+        observation = np.array( [ self.world[ point[0], point[1] ] for point in final_FOV ])
+
+        if self.visualize:
+            self.visualize_FOV(final_FOV)
+
+        return observation
+
+    def define_FOV_heading(self):
+
+        FOV_heading = []
+        r = 2 * self.levels_FOV + 1
+        tH = self.levels_FOV * r
+        t = r ** 2
+
+        for l in range(1, self.levels_FOV + 1):
+
+            if not self.heading:  # Heading = 0
+                FOV_heading += range((self.levels_FOV - l) * r, (self.levels_FOV - l + 1) * r, 1)
+
+            elif self.heading == 1:  # Heading = 1
+                FOV_heading += range(r - (self.levels_FOV - l + 1), t, r)
+
+            elif self.heading == 2:  # Heading = 2
+                FOV_heading += range((r - (self.levels_FOV - l)) * r - 1, (self.levels_FOV + l) * r - 1, -1)
+
+            elif self.heading == 3:  # Heading = 3
+                FOV_heading += range(2 * tH + (self.levels_FOV - l), self.levels_FOV - l - 1, -1 * r)
+
+        return FOV_heading
 
     def visualize_FOV(self, FOV):
         for receptor in FOV:
-            self.world_history[ receptor[0], receptor[1], self.step_tick ] = 0.75 * self.agent_value
+            self.world_history[ receptor[0], receptor[1], self.step_tick - 1 ] = 0.75 * self.agent_value
 
     def act(self, observation):
 
@@ -107,11 +140,11 @@ class Agent:
         self.location[0] = self.enforce_wrapping( self.location[0] + action['position_adjust'][self.heading][0] )
         self.location[1] = self.enforce_wrapping( self.location[1] + action['position_adjust'][self.heading][1] )
 
-        # Define the agent FOV
-        FOV = self.define_FOV()
-
     def observe(self):
-        observation = 0
+
+        # Define the agent FOV
+        observation = self.define_FOV()
+
         return observation
 
     def step(self):

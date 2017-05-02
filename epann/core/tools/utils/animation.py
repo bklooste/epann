@@ -21,7 +21,7 @@ class Animation:
         # self.writer = Writer(fps=15, metadata=dict(artist='Me'), bitrate=1800)
 
     def animate(self):
-        ani = animation.ArtistAnimation(self.fig, self.frames, interval=50, blit=True, repeat_delay=1000)
+        ani = animation.ArtistAnimation(self.fig, self.frames, interval=150, blit=True, repeat_delay=1000)
         plt.axis('off')
         plt.show()
         # if self.save_animation:

@@ -7,7 +7,7 @@ class Environment:
 
     def __init__(self):
 
-        self.num_decisions = 500
+        self.num_decisions = 300
 
         self.visualize = True
         self.current = Simple(self.visualize)
@@ -31,10 +31,10 @@ class Simple:
 
     def __init__(self, visualize):
 
-        self.world_size = 30
+        self.world_size = 250
 
         # Reward parameters
-        self.nutrient_density = 0.25
+        self.nutrient_density = .15
         self.metabolic_cost = -0.2
         self.nutrient_value = 3 * -1 * self.metabolic_cost
         self.world_vals = [ self.metabolic_cost, self.nutrient_value, visualize ]
