@@ -12,16 +12,24 @@ import matplotlib.animation as animation
 
 class Animation:
 
-    def __init__(self, array):
+    def __init__(self, data):
         self.fig = plt.figure()
-        self.frames = [[plt.imshow(array[:, :, frame], animated=True)] for frame in range(array.shape[2])]
+        self.frames = [[plt.imshow(data[:, :, frame], animated=True)] for frame in range(data.shape[2])]
 
-    def run(self):
+        # Set up formatting for saving an animation
+        # self.save_animation = True
+        # Writer = animation.writers['ffmpeg']
+        # self.writer = Writer(fps=15, metadata=dict(artist='Me'), bitrate=1800)
+
+    def animate(self):
         ani = animation.ArtistAnimation(self.fig, self.frames, interval=50, blit=True, repeat_delay=1000)
         plt.axis('off')
         plt.show()
+        # if self.save_animation:
+        #     ani.save('im.mp4', writer=self.writer)
 
-# ##### EXAMPLE #####
+
+##### EXAMPLE #####
 # sample = np.random.randn(100, 100, 60)
 # anim = Animation(sample)
-# anim.run()
+# anim.animate()
