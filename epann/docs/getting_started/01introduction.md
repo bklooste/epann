@@ -16,7 +16,6 @@ Once you have made your way through the introduction, you can find a collection 
 
 The goal of **epann** parellels the ideal (though often unspoken) goals of artificial intelligence - to develop solid theory for generating intelligent models for solving any type of problem a biological nervous system could encounter. That goal is tremenously ambitious, and in a way the purpose of **epann** is to expose the difficulty of striving towards that objective. Furthermore, **epann** focuses on neuroevolutionary methods of *indirect encodings*, taking inspiration from the mechanisms that allowed biological organisms to discovery meaningful and effective solutions for life through evolution by natural selection.  
 
-Most of the algorithms used in the library come from the works of Kenneth O. Stanley (UCF), Bruno Olshausen (Redwood Institute), as well as my colleagues at the Machine Perception & Cognitive Robotics Laboratory (FAU), and they will be cited as such when appropriate.
 
 ### Outline
 
