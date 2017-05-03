@@ -68,44 +68,44 @@ class Simple:
     def step(self):
 
         self.agent.step()
-
-env = Environment()
-# env.run()
-decisions = [ 125, 250, 500, 1000, 2000 ]
-
-num_reps = 20
-densities = [ 0.15, 0.30, 0.45, 0.60, 0.75, 0.90 ]
-
-plot_count = 1
-
-for decisions in decisions:
-
-    print '-', decisions, 'Decisions'
-
-    env.num_decisions = decisions
-
-    cum_reward = np.zeros((num_reps, len(densities)))
-
-    for d in range(len(densities)):
-
-        print '     - Nutrient Density: ', densities[d]
-
-        env.current.nutrient_density = densities[d]
-
-        for rep in range(num_reps):
-
-            env.run()
-            cum_reward[rep, d] += env.current.agent.cumulative_reward
-
-    mean = np.mean(cum_reward, axis=0)
-    std = np.std(cum_reward, axis=0)
-    xaxis = np.zeros((len(densities), ))
-
-    plt.subplot(2, 3, plot_count)
-    plt.errorbar(densities, mean, yerr=std)
-    plt.plot(densities, xaxis)
-    plt.title(str(decisions) + ' Decisions')
-
-    plot_count += 1
-
-plt.show()
+#
+# env = Environment()
+# # env.run()
+# decisions = [ 125, 250, 500, 1000, 2000 ]
+#
+# num_reps = 20
+# densities = [ 0.15, 0.30, 0.45, 0.60, 0.75, 0.90 ]
+#
+# plot_count = 1
+#
+# for decisions in decisions:
+#
+#     print '-', decisions, 'Decisions'
+#
+#     env.num_decisions = decisions
+#
+#     cum_reward = np.zeros((num_reps, len(densities)))
+#
+#     for d in range(len(densities)):
+#
+#         print '     - Nutrient Density: ', densities[d]
+#
+#         env.current.nutrient_density = densities[d]
+#
+#         for rep in range(num_reps):
+#
+#             env.run()
+#             cum_reward[rep, d] += env.current.agent.cumulative_reward
+#
+#     mean = np.mean(cum_reward, axis=0)
+#     std = np.std(cum_reward, axis=0)
+#     xaxis = np.zeros((len(densities), ))
+#
+#     plt.subplot(2, 3, plot_count)
+#     plt.errorbar(densities, mean, yerr=std)
+#     plt.plot(densities, xaxis)
+#     plt.title(str(decisions) + ' Decisions')
+#
+#     plot_count += 1
+#
+# plt.show()
