@@ -8,7 +8,7 @@ class Agent:
     def __init__(self, world, num_decisions, world_vals):
 
         # Observation parameters
-        self.levels_FOV = 4
+        self.levels_FOV = 1
         self.conical_FOV = False
 
         # Action parameters
@@ -23,8 +23,7 @@ class Agent:
 
         # Dynamic global parameters changed by actions
         self.location = [ int(self.world.shape[0]/2), int(self.world.shape[1]/2) ]
-        self.heading = 0
-        self.headings = { 0: [0, 1, 2], 1: [2, 5, 8], 2: [8, 7, 6], 3: [6, 3, 0] }
+        self.heading = 0 # Initialize agent heading upwards
 
         # Place initial agent location in world history
         self.agent_value = 2
@@ -55,14 +54,14 @@ class Agent:
 
         actions = {}
 
-        # Heading changes
-        actions[0] = { 'heading_adjust': -1, 'position_adjust': empty_position_adjust }
-        actions[1] = { 'heading_adjust': 1, 'position_adjust': empty_position_adjust }
-
         # Position changes
-        actions[2] = { 'heading_adjust': 0, 'position_adjust': straight }
-        actions[3] = { 'heading_adjust': 0, 'position_adjust': diagonal_right }
-        actions[4] = { 'heading_adjust': 0, 'position_adjust': diagonal_left }
+        actions[0] = { 'heading_adjust': 0, 'position_adjust': straight }
+        actions[1] = { 'heading_adjust': 0, 'position_adjust': diagonal_right }
+        actions[2] = { 'heading_adjust': 0, 'position_adjust': diagonal_left }
+
+        # Heading changes
+        actions[3] = { 'heading_adjust': -1, 'position_adjust': empty_position_adjust }
+        actions[4] = { 'heading_adjust': 1, 'position_adjust': empty_position_adjust }
 
         return actions
 
@@ -139,6 +138,9 @@ class Agent:
         # Update location
         self.location[0] = self.enforce_wrapping( self.location[0] + action['position_adjust'][self.heading][0] )
         self.location[1] = self.enforce_wrapping( self.location[1] + action['position_adjust'][self.heading][1] )
+
+        # Update the cumulative reward for the agent's new location
+        self.cumulative_reward += self.world[ self.location[0], self.location[1] ]
 
     def observe(self):
 
