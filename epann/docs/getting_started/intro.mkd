@@ -13,3 +13,9 @@ Once you have made your way through the introduction, you can find a collection 
 ### Overview
 
 ### Outline
+
+1. Overview
+2. Agents that Learn: Solving Tasks through Gradient-based Learning
+3. Populations that Learn: Solving Tasks through Genetic Algorithms and Direct Encodings
+4. Populations that Learn to Learn: Solving Tasks through Neuroevolution and Indirect Encodings
+5. Conclusions
