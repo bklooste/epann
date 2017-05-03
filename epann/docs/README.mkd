@@ -2,4 +2,23 @@
 
 * Introduction
     * [Getting Started](https://github.com/chadwcarlson/epann/blob/master/epann/docs/getting_started/01introduction.md)
-* Experiments
+    * [Overview of the Primary Modules]()
+    
+* Example Experiments
+    1. 
+    
+* Literature
+    *   Neuroevolution (general)
+    *   Direct Encodings
+        * Rumelhart, Hinton
+        * NEAT
+    *   Indirect Encodings
+        * Compressed Weight Space
+        * HyperNEAT
+        * ES-HyperNEAT
+        * adaptive-HyperNEAT
+    *   Non-Objective Search
+        * Minimum Fitness Criteria
+    *   Sparse Coding
+    *   Locally Competitive Algorithms
+    *   Other
