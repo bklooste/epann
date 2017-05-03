@@ -6,15 +6,17 @@
 
 **epann** is a neuroevolution framework for designing artificial life experiments using variants of the HyperNEAT algorithm. 
 
-The author recognizes the existence of other [libraries](http://eplex.cs.ucf.edu/neat_software/) that already implement many features of this research pipeline, however maintains the perspective that better understanding can come from writing it yourself. 
+The author recognizes the existence of other [libraries](http://eplex.cs.ucf.edu/neat_software/) that implement many features of this research pipeline, however maintains the perspective that better understanding can come from writing it yourself. 
+
+This Getting Started section is intended to be an introduction to the **epann** package, as well as its design and contribution to the fields of neuroevolution, artificial intelligence, and theoretical neuroscience according to the research goals of the author. You will find code for interacting with the library and using it to implement standard machine learning techniques and less common neuroevolutionary methods on a variety of tasks. 
+
+Once you have made your way through the introduction, you can find a collection of other relevant experiments in the [docs](https://github.com/chadwcarlson/epann/tree/master/epann/docs).
 
 ### Overview
 
-The goal of **epann** parellels the ideal (though often unspoken) goals of artificial intelligence - to develop solid theory for generating intelligent models for solving any type of problem a biological nervous system could encounter. That goal is tremenously ambitious, and in a way the purpose of **epann** is to expose the difficulty of striving towards that objective with respect to biological life and how it came to those capabilities through evolution by natural selection. 
+The goal of **epann** parellels the ideal (though often unspoken) goals of artificial intelligence - to develop solid theory for generating intelligent models for solving any type of problem a biological nervous system could encounter. That goal is tremenously ambitious, and in a way the purpose of **epann** is to expose the difficulty of striving towards that objective. Furthermore, **epann** focuses on neuroevolutionary methods of *indirect encodings*, taking inspiration from the mechanisms that allowed biological organisms to discovery meaningful and effective solutions for life through evolution by natural selection.  
 
-**epann** provides a general purpose environment for generating Compositional Pattern Producing Network (CPPN) genomes that map to agent phenotype artificial neural networks that can be trained and optimized on benchmark machine learning tasks. 
-
-Most of the algorithms used in **epann** come from the works of Kenneth O. Stanley (UCF), Bruno Olshausen (Redwood Institute), as well as my colleagues at the Machine Perception & Cognitive Robotics Laboratory (FAU), and they will be cited as such when appropriate.
+Most of the algorithms used in the library come from the works of Kenneth O. Stanley (UCF), Bruno Olshausen (Redwood Institute), as well as my colleagues at the Machine Perception & Cognitive Robotics Laboratory (FAU), and they will be cited as such when appropriate.
 
 ### Outline
 
