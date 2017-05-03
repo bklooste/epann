@@ -1,8 +1,8 @@
 
-from epann.core.tools.utils.structs import Structs
-
-from epann.core.tools.constants.cppn import *
-from epann.core.tools.constants.hyperNEAT import *
+# from epann.core.tools.utils.structs import Structs
+#
+# from epann.core.tools.constants.cppn import *
+# from epann.core.tools.constants.hyperNEAT import *
 
 import numpy as np
 

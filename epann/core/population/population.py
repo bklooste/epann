@@ -1,6 +1,6 @@
 
-from epann.core.population.genome.cppn import CPPN
-from epann.core.population.ga.hyperNEAT import HyperNEAT
+# from epann.core.population.genome.cppn import CPPN
+# from epann.core.population.ga.hyperNEAT import HyperNEAT
 
 import numpy as np
 

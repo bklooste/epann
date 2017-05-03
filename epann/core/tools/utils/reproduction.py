@@ -1,10 +1,10 @@
 
 
-from epann.core.tools.utils.structs import Structs
-from epann.core.tools.utils.child import Child
-
-from epann.core.tools.constants.cppn import *
-from epann.core.tools.constants.hyperNEAT import *
+# from epann.core.tools.utils.structs import Structs
+# from epann.core.tools.utils.child import Child
+#
+# from epann.core.tools.constants.cppn import *
+# from epann.core.tools.constants.hyperNEAT import *
 
 import numpy as np
 from random import shuffle
@@ -245,3 +245,8 @@ class SexualReproduction():
 
 
         return self.children
+
+class AsexualReproduction():
+
+    def __init__(self):
+        pass

@@ -1,6 +1,6 @@
 
-from epann.core.population.population import Population
-from epann.core.environment.environment import Environment
+# from epann.core.population.population import Population
+# from epann.core.environment.environment import Environment
 
 from progressbar import ProgressBar, SimpleProgress, FormatLabel
 
