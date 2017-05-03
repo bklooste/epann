@@ -7,7 +7,7 @@ Evolutionary Plastic Artificial Neural Networks
 
 ### Goals:
 
-1. Create and maintain a general purpose research framework for applying neuroevolution and non-objective search. 
+1. Create and maintain a general purpose research framework for implementing neuroevolution and non-objective search in machine learning experiments. 
 2. Track experiments with effective documentation towards personal research goals and potential use across MPCR lab projects.
 3. Practice in package management. 
 
