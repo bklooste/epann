@@ -15,6 +15,4 @@ Evolutionary Plastic Artificial Neural Networks
 
 Start with an **[Introduction to epann](https://github.com/chadwcarlson/epann/blob/master/epann/docs/getting_started/01introduction.md)**
 
-### Then:
 
-Move on to some **Experiments**
