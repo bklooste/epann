@@ -2,6 +2,11 @@
 
 ---
 
+```python
+s = "Python syntax highlighting"
+print s
+```
+
 # Simulating Organisms that Learn
 
 Biological organisms are intelligent in ways we hope to replicate in machines. There is a tremendous diversity of solutions of intelligence on our planet, and a theory of nervous systems should account for that diversity. A prominent way of thinking about the existence of a particular nervous system is the observation that it exists as a solution that is a product of both learning during the lifetime of that organism, as well as the evolutionary history of previous solutions that led to it. 
